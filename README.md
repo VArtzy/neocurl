@@ -53,8 +53,11 @@ X-API-TOKEN: 25edd380-731c-4d9f-ac9b-b49f01e205bd// or here
 ```
 
 - Run :Http, :Httpv or :Httpd in nvim command
+
 ```:Http``` -- formatted
+
 ```:Httpv``` -- verbose version (using curl -v)
+
 ```:Httpd``` -- debug mode, curl statement will appear on statusline
 
 - Seperate window will appear and provide response from curl http request
