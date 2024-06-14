@@ -3,7 +3,7 @@
 " Last Change:  14 June 2024
 " Maintainer:   VArtzy <https://github.com/VArtzy>
 
-if exists(g:neocurl)
+if exists("g:neocurl")
     finish
 endif
 let g:neocurl = 1
