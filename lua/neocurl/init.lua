@@ -25,6 +25,10 @@ local function parse_and_execute_http_request(lines, verbose, debug)
         end
     end
 
+    if not method or not url then
+        print("Error: Invalid HTTP request block.")
+        return
+    end
     -- Construct curl command
     local curl_command = 'curl -s -X ' .. method .. ' "' .. url .. '"'
     if headers then
