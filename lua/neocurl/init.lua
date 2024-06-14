@@ -49,7 +49,6 @@ local function parse_and_execute_http_request(lines, verbose, debug)
     vim.cmd("term " .. curl_command .. " | jq")
 end
 
--- Function to execute HTTP requests from selected visual block
 function M.execute_http_request_from_visual(verbose, debug)
     local cursor_pos = vim.api.nvim_win_get_cursor(0)
     local total_lines = vim.api.nvim_buf_line_count(0)
@@ -73,6 +72,11 @@ function M.execute_http_request_from_visual(verbose, debug)
             break
         end
         end_line = end_line + 1
+    end
+
+    if start_line == end_line then
+        print("Error: No HTTP request block found.")
+        return
     end
 
     -- Get the lines of the current block
