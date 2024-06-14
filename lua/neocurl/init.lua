@@ -1,5 +1,5 @@
 local M = {}
-local function parse_and_execute_http_request(lines, verbose, debug)
+local function parse(lines, verbose, debug)
     local method, url, headers, body
     headers = {}
     body = ""
@@ -30,7 +30,7 @@ local function parse_and_execute_http_request(lines, verbose, debug)
         return
     end
     -- Construct curl command
-    local curl_command = 'curl -s -X ' .. method .. ' "' .. url .. '"'
+    local curl_command = 'curl -X ' .. method .. ' "' .. url .. '"'
     if headers then
         curl_command = curl_command .. " " .. table.concat(headers, " ")
     end
@@ -46,10 +46,10 @@ local function parse_and_execute_http_request(lines, verbose, debug)
 
     -- Execute curl command in a new split
     vim.cmd("vsplit")
-    vim.cmd("term " .. curl_command .. " | jq")
+    vim.cmd("term " .. curl_command .. " -s | jq")
 end
 
-function M.execute_http_request_from_visual(verbose, debug)
+function M.exec(verbose, debug)
     local cursor_pos = vim.api.nvim_win_get_cursor(0)
     local total_lines = vim.api.nvim_buf_line_count(0)
     local current_line = cursor_pos[1]
@@ -80,6 +80,6 @@ function M.execute_http_request_from_visual(verbose, debug)
     end
 
     -- Get the lines of the current block
-    parse_and_execute_http_request(vim.api.nvim_buf_get_lines(0, start_line - 1, end_line - 1, false), verbose, debug)
+    parse(vim.api.nvim_buf_get_lines(0, start_line - 1, end_line - 1, false), verbose, debug)
 end
 return M

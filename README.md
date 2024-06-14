@@ -1,4 +1,7 @@
-# NEOCURL
+#  _ __   ___  ___   ___ _   _ _ __ -
+# | '_ \ / _ \/ _ \ / __| | | | '__| |
+# | | | |  __/ (_) | (__| |_| | |  | |
+# |_| |_|\___|\___/ \___|\__,_|_|  |_|
 
 ## Simple, effective and fast HTTP Client based on curl for neovim
 
@@ -9,6 +12,9 @@ The neocurl plugin are designed for ease to use and getting work done fast so yo
 - Packer
 
 ```use 'vartzy/neocurl'```
+
+Lazy load it (Recommended)
+```use {'vartzy/neocurl', ft = 'http'}```
 
 - Vim Plug
 
@@ -30,6 +36,7 @@ scoop install main/jq
 ```
 
 - Mac
+
 ```brew install jq```
 
 - Linux
@@ -67,7 +74,7 @@ Accept: application/json
 X-API-TOKEN: 25edd380-731c-4d9f-ac9b-b49f01e205bd
 ```
 
-- Select block that you want to run with place your cursor in block area (from ### to \n###)
+- Select block that you want to run with place your cursor in block area
 ```
 ### Get User // place your cursor here
 GET http://localhost:3000/api/users/current // or here
