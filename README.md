@@ -1,8 +1,9 @@
-#  _ __   ___  ___   ___ _   _ _ __ -
-# | '_ \ / _ \/ _ \ / __| | | | '__| |
-# | | | |  __/ (_) | (__| |_| | |  | |
-# |_| |_|\___|\___/ \___|\__,_|_|  |_|
-
+```
+  _ __   ___  ___   ___ _   _ _ __ -
+ | '_ \ / _ \/ _ \ / __| | | | '__| |
+ | | | |  __/ (_) | (__| |_| | |  | |
+ |_| |_|\___|\___/ \___|\__,_|_|  |_|
+```
 ## Simple, effective and fast HTTP Client based on curl for neovim
 
 The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
