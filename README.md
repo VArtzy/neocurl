@@ -6,10 +6,35 @@ The neocurl plugin are designed for ease to use and getting work done fast so yo
 
 ### Installation
 
+- Packer
+
+```use 'vartzy/neocurl'```
+
+- Vim Plug
+
+```Plug 'vartzy/neocurl'```
+
+- Lazy
+
+```"vartzy/neocurl"```
+
 ### Depedencies
 
 - curl
 - jq
+
+- Windows (via Scoop)
+```
+scoop install main/curl
+scoop install main/jq
+```
+
+- Mac
+```brew install jq```
+
+- Linux
+
+```sudo apt install jq```
 
 ### Using neocurl example
 
