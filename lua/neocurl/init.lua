@@ -1,3 +1,4 @@
+local M = {}
 local function parse_and_execute_http_request(lines, verbose, debug)
     local method, url, headers, body
     headers = {}
@@ -45,7 +46,7 @@ local function parse_and_execute_http_request(lines, verbose, debug)
 end
 
 -- Function to execute HTTP requests from selected visual block
-function execute_http_request_from_visual(verbose, debug)
+function M.execute_http_request_from_visual(verbose, debug)
     local cursor_pos = vim.api.nvim_win_get_cursor(0)
     local total_lines = vim.api.nvim_buf_line_count(0)
     local current_line = cursor_pos[1]
@@ -73,7 +74,4 @@ function execute_http_request_from_visual(verbose, debug)
     -- Get the lines of the current block
     parse_and_execute_http_request(vim.api.nvim_buf_get_lines(0, start_line - 1, end_line - 1, false), verbose, debug)
 end
-
-vim.cmd("command! Http lua execute_http_request_from_visual()")
-vim.cmd("command! Httpv lua execute_http_request_from_visual(true)")
-vim.cmd("command! Httpd lua execute_http_request_from_visual(false, true)")
+return M
