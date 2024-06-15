@@ -6,7 +6,7 @@
 ```
 ## Simple, effective and fast HTTP Client based on curl for neovim
 
-The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
+Directly plug http client to your neovim without overwhelming setup and configuration. The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
 
 ### Installation
 
@@ -28,7 +28,7 @@ Lazy load it (Recommended)
 ### Depedencies
 
 - curl
-- jq
+- jq (optional -- recommended for pretty print)
 
 - Windows (via Scoop)
 ```
@@ -87,7 +87,7 @@ X-API-TOKEN: 25edd380-731c-4d9f-ac9b-b49f01e205bd// or here
 
 - Run :Http, :Httpv or :Httpd in nvim command
 
-```:Http``` -- formatted
+```:Http``` -- **only request with Accept header will formated**
 
 ```:Httpv``` -- verbose version (using curl -v)
 

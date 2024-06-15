@@ -44,9 +44,16 @@ local function parse(lines, verbose, debug)
         print(curl_command)
     end
 
+    local json = false
+    for _, header in ipairs(headers) do
+        if header:match("-H \"Accept: application/json\"") then
+            json = true
+            break
+        end
+    end
     -- Execute curl command in a new split
     vim.cmd("vsplit")
-    vim.cmd("term " .. curl_command .. " -s -w \\%{time_total} | jq")
+    vim.cmd("term " .. curl_command .. " -s -w \\%{time_total}" .. (json and " | jq" or ""))
 end
 
 function M.exec(verbose, debug)
