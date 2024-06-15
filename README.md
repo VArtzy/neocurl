@@ -93,4 +93,4 @@ X-API-TOKEN: 25edd380-731c-4d9f-ac9b-b49f01e205bd// or here
 
 ```:Httpd``` -- debug mode, curl statement will appear on statusline
 
-- Seperate window will appear and provide response from curl http request
+- Seperate window will appear and provide response from curl http request with time measurre in second
