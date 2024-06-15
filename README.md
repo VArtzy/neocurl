@@ -6,7 +6,7 @@
 ```
 ## Simple, effective and fast HTTP Client based on curl for neovim
 
-Directly plug http client to your neovim without overwhelming setup and configuration. The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
+Directly plug lightweight http client to your neovim without overwhelming setup and configuration. The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
 
 ### Installation
 
