@@ -46,7 +46,7 @@ local function parse(lines, verbose, debug)
 
     -- Execute curl command in a new split
     vim.cmd("vsplit")
-    vim.cmd("term " .. curl_command .. " -s | jq")
+    vim.cmd("term " .. curl_command .. " -s -w \\%{time_total} | jq")
 end
 
 function M.exec(verbose, debug)
