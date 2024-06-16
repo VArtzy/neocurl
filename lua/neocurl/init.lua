@@ -5,24 +5,15 @@ local function parse(lines, verbose, debug)
     body = ""
 
     -- Parse lines to extract HTTP request details
-    local in_body = false
     for _, line in ipairs(lines) do
-        if not in_body then
             if line:match("^%s*(%u+)%s+(http.+)$") then
                 method, url = line:match("^%s*(%u+)%s+(http.+)$")
             elseif line:match("^%s*([%w-]+)%s*:%s*(.+)$") then
                 local header, value = line:match("^%s*([%w-]+)%s*:%s*(.+)$")
                 table.insert(headers, string.format('-H "%s: %s"', header, value))
-            elseif line:match("^%s*{") then
-                in_body = true
+            else
                 body = body .. line
             end
-        else
-            if line:match("^%s*}$") then
-                in_body = false
-            end
-            body = body .. line
-        end
     end
 
     if not method or not url then
@@ -52,8 +43,10 @@ local function parse(lines, verbose, debug)
         end
     end
     -- Execute curl command in a new split
-    vim.cmd("vsplit")
-    vim.cmd("term " .. curl_command .. " -s -w \\%{time_total}" .. (json and " | jq" or ""))
+    local _, err = pcall(vim.cmd, "vsplit | term " .. curl_command .. " -s -w \\%{time_total}" .. (json and " | jq" or ""))
+    if err:match("E114") or err:match("E116") then
+        print("Terminal change due 'termopen' doesnt support long curl commands.\n" .. vim.fn.system(curl_command .. " -s -w %{time_total}" .. (json and " | jq" or "")))
+    end
 end
 
 function M.exec(verbose, debug)
