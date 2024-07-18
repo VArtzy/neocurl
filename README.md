@@ -5,6 +5,7 @@
  |_| |_|\___|\___/ \___|\__,_|_|  |_|
 ```
 ## Simple, effective and fast HTTP Client based on curl for neovim
+[neocurl-demo.webm](https://github.com/user-attachments/assets/bc010a08-54ac-4970-847b-743c18bc4848)
 
 Directly plug lightweight http client to your neovim without overwhelming setup and configuration. The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
 
