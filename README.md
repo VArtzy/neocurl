@@ -5,9 +5,9 @@
  |_| |_|\___|\___/ \___|\__,_|_|  |_|
 ```
 # Simple, effective and fast HTTP Client based on curl for neovim
-## Interactive interface, raw performance.¹ HTTP, OAuth and GraphQL Supported.²
-## It's not just testing your API, you're create documentation simultaneously. Directly through your beautiful codebase.
-## Don't ever leave the vim and terminal. Command-line scripting style for hackers.
+## Interactive interface, raw performance.¹<br>HTTP, OAuth and GraphQL Supported.²
+## It's not just testing your API,<br>you're create documentation simultaneously.
+## Don't ever leave the vim and terminal.<br>Command-line scripting style for hackers.
 
 [neocurl-demo.webm](https://github.com/user-attachments/assets/bc010a08-54ac-4970-847b-743c18bc4848)
 
