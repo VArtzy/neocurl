@@ -4,10 +4,14 @@
  | | | |  __/ (_) | (__| |_| | |  | |
  |_| |_|\___|\___/ \___|\__,_|_|  |_|
 ```
-## Simple, effective and fast HTTP Client based on curl for neovim
+# Simple, effective and fast HTTP Client based on curl for neovim
+## Interactive interface, raw performance.¹ HTTP, OAuth and GraphQL Supported.²
+## It's not just testing your API, you're create documentation simultaneously. Directly through your beautiful codebase.
+## Don't ever leave the vim and terminal. Command-line scripting style for hackers.
+
 [neocurl-demo.webm](https://github.com/user-attachments/assets/bc010a08-54ac-4970-847b-743c18bc4848)
 
-Directly plug lightweight http client to your neovim without overwhelming setup and configuration. The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development!
+Directly plug lightweight http client to your neovim without overwhelming setup and configuration. The neocurl plugin are designed for ease to use and getting work done fast so you can focus on your development! (No analytics/ telemetry)
 
 ### Installation
 
@@ -97,3 +101,7 @@ X-API-TOKEN: 25edd380-731c-4d9f-ac9b-b49f01e205bd// or here
 - Seperate window will appear and provide response from curl http request with time measurre in second
 
 **You may check or contributing [wiki page](https://github.com/VArtzy/neocurl/wiki) to cover another case example.**
+
+Footnotes
+- ¹ Neocurl use neovim native UI (window) and curl, making an interactive interface and nearly raw curl performance.
+- ² HTTP, OAuth and GraphQL supported through it need better support and does not user friendly right now (see wiki)
