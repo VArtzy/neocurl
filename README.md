@@ -102,6 +102,5 @@ X-API-TOKEN: 25edd380-731c-4d9f-ac9b-b49f01e205bd// or here
 
 **You may check or contributing [wiki page](https://github.com/VArtzy/neocurl/wiki) to cover another case example.**
 
-Footnotes
-- ¹ Neocurl use neovim native UI (window) and curl, making an interactive interface and raw curl performance.
-- ² HTTP, OAuth and GraphQL supported through it need better support and does not user friendly right now (see wiki)
+¹ Neocurl use neovim native UI (window) and curl, making an interactive interface and raw curl performance.
+² HTTP, OAuth and GraphQL supported through it need better support and does not user friendly right now (see wiki)
